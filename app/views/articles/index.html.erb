@@ -1,0 +1,12 @@
+index.html.erb
+
+<%= link_to "Add Article", new_article_path %>
+<div class="container">
+  <ul>
+ <%  @articles.each do |article| %>
+  <li><%= link_to article.title, article_path(article.id) %></li>
+  <li><%= article.content %></li>
+ <% end %>
+ </ul>
+
+</div>

@@ -1,0 +1,12 @@
+<%= link_to "Home", articles_path %>
+
+
+<div class="container">
+  <ul>
+  <li><%= @article.title %></li>
+  <li><%= @article.content %></li>
+  <%= link_to "Delete", article_path(@article.id), method: :delete %>
+  <%= link_to "Edit", edit_article_path(@article.id)%>
+ </ul>
+</div>
+
